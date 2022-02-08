@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println("test sqrt\n", math.Sqrt(7));
+	fmt.Println("test sqrt\n", math.Sqrt(7))
 }
