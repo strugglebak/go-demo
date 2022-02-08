@@ -22,6 +22,6 @@ func main() {
 	}
 	fmt.Println(sum)
 
-	// forerver
+	// forever
 	for {}
 }
