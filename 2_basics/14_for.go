@@ -21,4 +21,7 @@ func main() {
 		sum += sum
 	}
 	fmt.Println(sum)
+
+	// forerver
+	for {}
 }
