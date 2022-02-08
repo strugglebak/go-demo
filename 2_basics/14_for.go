@@ -10,4 +10,8 @@ func main() {
 		sum += 1
 	}
 	fmt.Println(sum)
+	for ; sum < 1000; {
+		sum += sum;
+	}
+	fmt.Println(sum)
 }
