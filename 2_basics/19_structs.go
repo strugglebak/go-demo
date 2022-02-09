@@ -15,4 +15,8 @@ func main() {
 
 	v.X = 4
 	fmt.Println(v.X)
+
+	p := &v
+	p.X = 1e9
+	fmt.Println(v)
 }
