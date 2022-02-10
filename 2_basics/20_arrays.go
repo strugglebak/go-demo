@@ -92,6 +92,12 @@ func main() {
 	// len = 2 cap = 4 [5 7]
 	s4 = s4[2:]
 	printSlice(s4)
+
+	var s5 []int
+	fmt.Println(s5, len(s), cap(s))
+	if s5 == nil {
+		fmt.Println("nil!")
+	}
 }
 
 func printSlice(s []int) {
