@@ -37,4 +37,17 @@ func main() {
 
 	fmt.Println(m2)
 	fmt.Println(m3)
+
+	m4 := make(map[string]int)
+	m4["Answer"] = 42
+	fmt.Println("The value:", m4["Answer"])
+
+	m4["Answer"] = 48
+	fmt.Println("The value:", m4["Answer"])
+
+	delete(m4, "Answer")
+	fmt.Println("The value:", m4["Answer"])
+
+	v, ok := m4["Answer"]
+	fmt.Println("The value:", v, "Present?", ok)
 }
