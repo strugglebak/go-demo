@@ -37,7 +37,14 @@ type T struct {
 // but we don't need to explicitly declare that it does so.
 // Interfaces are implemented implicitly
 // no "implements" keyword.
-func (t T) M() {
+// func (t T) M() {
+// 	fmt.Println(t.S)
+// }
+func (t *T) M() {
+	if t == nil {
+		fmt.Println("<nil>")
+		return
+	}
 	fmt.Println(t.S)
 }
 
@@ -60,8 +67,8 @@ func main() {
 
 	fmt.Println(a.Abs())
 
-	var i I = T{"hello"}
-	i.M()
+	// var i I = T{"hello"}
+	// i.M()
 
 	var j I
 	j = &T{"hello J"}
@@ -71,6 +78,18 @@ func main() {
 	j = F(math.Pi)
 	describe(j)
 	j.M()
+
+	var k I
+	var t *T
+	k = t
+	// k is nil
+	describe(k)
+	k.M()
+
+	k = &T{"hello K"}
+	// k is not nil
+	describe(k)
+	k.M()
 }
 
 func describe(i I) {
