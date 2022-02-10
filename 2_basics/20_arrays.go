@@ -16,4 +16,21 @@ func main() {
 
 	var s []int = primes[1:4]
 	fmt.Println(s)
+
+	names := [4]string{
+		"aaaa",
+		"bbbb",
+		"cccc",
+		"dddd",
+	}
+	fmt.Println(names)
+
+	// slices are like references to arrays
+	a1 := names[0:2]
+	b1 := names[1:3]
+	fmt.Println(a1, b1)
+
+	b1[0] = "XXX"
+	fmt.Println(a1, b1)
+	fmt.Println(names)
 }
