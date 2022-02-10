@@ -27,6 +27,19 @@ type Abser interface {
 	Abs() float64
 }
 
+type I interface {
+	M()
+}
+type T struct {
+	S string
+}
+// This method means type T implements the interface I,
+// but we don't need to explicitly declare that it does so.
+// Interfaces are implemented implicitly
+func (t T) M() {
+	fmt.Println(t.S)
+}
+
 func main() {
 	var a Abser
 	f := MyFloat(-math.Sqrt2)
@@ -40,4 +53,7 @@ func main() {
 	// a = v
 
 	fmt.Println(a.Abs())
+
+	var i I = T{"hello"}
+	i.M()
 }
