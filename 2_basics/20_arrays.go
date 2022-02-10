@@ -50,4 +50,17 @@ func main() {
 		{5, true},
 	}
 	fmt.Println(s2)
+
+	s3 := []int{2, 3, 5, 7, 11, 13}
+	// [left:right]
+	// left: default zero
+	// right: the length of the slice
+	s3 = s3[1:4]
+	fmt.Println(s3)
+
+	s3 = s3[:2]
+	fmt.Println(s3)
+
+	s3 = s3[1:]
+	fmt.Println(s3)
 }
