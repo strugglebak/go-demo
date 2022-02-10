@@ -97,9 +97,24 @@ func main() {
 	// var z I
 	// describe(z)
 	// z.M()
+
+	var z interface{}
+	describe2(z)
+
+	z = 32
+	describe2(z)
+
+	z = "hello"
+	describe2(z)
 }
 
 func describe(i I) {
+	// interface values
+	// (value, type)
+	fmt.Printf("(%v, %T)\n", i, i)
+}
+
+func describe2(i interface{}) {
 	// interface values
 	// (value, type)
 	fmt.Printf("(%v, %T)\n", i, i)
