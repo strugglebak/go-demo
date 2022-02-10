@@ -63,4 +63,37 @@ func main() {
 
 	s3 = s3[1:]
 	fmt.Println(s3)
+
+
+	// The capacity of a slice is the number of elements in the
+	//【underlying array】,
+	// counting from the【first element】in the slice.
+
+	// first element is 2
+	// so cap is 6
+	// len = 6 cap = 6 [2 3 5 7 11 13]
+	s4 := []int{2, 3, 5, 7, 11, 13}
+	printSlice(s4)
+
+	// first element is 2
+	// so cap is 6
+	// len = 0 cap = 6 []
+	s4 = s4[:0]
+	printSlice(s4)
+
+	// first element is 2
+	// so cap is 6
+	// len = 4 cap = 6 [2 3 5 7]
+	s4 = s4[:4]
+	printSlice(s4)
+
+	// first element is 5
+	// so cap is 4
+	// len = 2 cap = 4 [5 7]
+	s4 = s4[2:]
+	printSlice(s4)
+}
+
+func printSlice(s []int) {
+	fmt.Printf("len = %d cap = %d %v\n",  len(s), cap(s), s)
 }
