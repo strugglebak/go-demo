@@ -41,6 +41,11 @@ func (t T) M() {
 	fmt.Println(t.S)
 }
 
+type F float64
+func (f F) M() {
+	fmt.Println(f)
+}
+
 func main() {
 	var a Abser
 	f := MyFloat(-math.Sqrt2)
@@ -57,4 +62,19 @@ func main() {
 
 	var i I = T{"hello"}
 	i.M()
+
+	var j I
+	j = &T{"hello J"}
+	describe(j)
+	j.M()
+
+	j = F(math.Pi)
+	describe(j)
+	j.M()
+}
+
+func describe(i I) {
+	// interface values
+	// (value, type)
+	fmt.Printf("(%v, %T)\n", i, i)
 }
