@@ -90,6 +90,13 @@ func main() {
 	// k is not nil
 	describe(k)
 	k.M()
+
+	// runtime error
+	// there is no type inside the interface tuple
+	// to indicate which concrete method to call.
+	// var z I
+	// describe(z)
+	// z.M()
 }
 
 func describe(i I) {
