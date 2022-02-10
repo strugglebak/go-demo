@@ -98,8 +98,25 @@ func main() {
 	if s5 == nil {
 		fmt.Println("nil!")
 	}
+
+	// make is using to specify a capacity
+	x1 := make([] int, 5)
+	printSlice1("x1", x1)
+
+	x2 := make([] int, 0, 5)
+	printSlice1("x2", x2)
+
+	x3 := x2[:2]
+	printSlice1("x3", x3)
+
+	x4 := x3[2:5]
+	printSlice1("x4", x4)
 }
 
 func printSlice(s []int) {
 	fmt.Printf("len = %d cap = %d %v\n",  len(s), cap(s), s)
+}
+
+func printSlice1(s string, x []int) {
+	fmt.Printf("%s: len = %d cap = %d %v\n",  s, len(x), cap(x), x)
 }
