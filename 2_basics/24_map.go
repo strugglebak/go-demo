@@ -19,6 +19,15 @@ var m2 = map[string]Vertex{
 	},
 }
 
+var m3 = map[string]Vertex{
+	"Bell Labs": {
+		40.68433, -74.39967,
+	},
+	"Google": {
+		37.42202, -122.08408,
+	},
+}
+
 func main() {
 	m = make(map[string]Vertex)
 	m["Bell Labs"] = Vertex{
@@ -27,4 +36,5 @@ func main() {
 	fmt.Println(m["Bell Labs"])
 
 	fmt.Println(m2)
+	fmt.Println(m3)
 }
